@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Add Product</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Product</h1>
+        <form id="addProductForm">
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price (DZD):</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Image URL:</label>
+                <input type="url" id="productImage" required>
+            </div>
+            <div class="form-group">
+                <label for="productBrand">Brand:</label>
+                <input type="text" id="productBrand" required>
+                <div id="brandSuggestions" class="suggestions-list"></div>
+            </div>
+            <div class="form-group">
+                <label for="productCategory">Category:</label>
+                <input type="text" id="productCategory" value="smartphones" required>
+            </div>
+            <div class="form-group">
+                <label for="productRam">RAM:</label>
+                <input type="text" id="productRam" required>
+            </div>
+            <div class="form-group">
+                <label for="productProcessor">Processor:</label>
+                <input type="text" id="productProcessor" required>
+            </div>
+            <div class="form-group">
+                <label for="productStorage">Storage:</label>
+                <input type="text" id="productStorage" required>
+            </div>
+            <div class="form-group">
+                <label for="productDisplay">Display:</label>
+                <input type="text" id="productDisplay" required>
+            </div>
+            <div class="form-group">
+                <label for="productCamera">Camera:</label>
+                <input type="text" id="productCamera" required>
+            </div>
+            <div class="form-group">
+                <label for="productBattery">Battery:</label>
+                <input type="text" id="productBattery" required>
+            </div>
+            <div class="form-group">
+                <label for="productRating">Rating (0-5):</label>
+                <input type="number" id="productRating" step="0.1" min="0" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="productReviews">Number of Reviews:</label>
+                <input type="number" id="productReviews" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="isNew">
+                <label for="isNew">New Product</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="isBestSeller">
+                <label for="isBestSeller">Best Seller</label>
+            </div>
+            <button type="submit">Add Product</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="admin.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Djellal Boutique</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <style>
+        .details-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .product-image-details img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .product-info-details h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .price-details {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        .payment-plans h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .plan {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .plan h3 {
+            margin-bottom: 10px;
+        }
+    .specs {
+            margin-bottom: 30px;
+        }
+        .spec {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .spec-label {
+            font-weight: bold;
+        }
+
+        .thumbnail-gallery {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            border-color: var(--primary);
+        }
+
+        .social-share {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .social-share h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .share-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .share-button.facebook {
+            background-color: #3b5998;
+        }
+
+        .share-button.twitter {
+            background-color: #00acee;
+        }
+
+        .share-button.whatsapp {
+            background-color: #25d366;
+        }
+
+        .share-button.linkedin {
+            background-color: #0077b5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>Djellal<span>Boutique</span></h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="container">
+            <ol id="breadcrumb-list">
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="index.html#products" aria-label="Products">Products</a></li>
+                <li id="category-crumb" aria-current="page">Product Details</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="details-container">
+                <div class="product-image-details">
+                    <img id="mainProductImage" src="" alt="Product Image">
+                    <div class="thumbnail-gallery" id="thumbnailGallery"></div>
+                </div>
+                <div class="product-info-details">
+                    <h1 id="productName"></h1>
+                    <p class="price-details" id="productPrice"></p>
+                    <div class="specs-accordion">
+                        <button class="specs-toggle" aria-expanded="true" aria-controls="specs-content">
+                            <h3>Product Specifications</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="specs-content" class="specs-content">
+                            <div class="spec">
+                                <span class="spec-label">RAM:</span>
+                                <span id="productRam"></span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Processor:</span>
+                                <span id="productProcessor"></span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Storage:</span>
+                                <span id="productStorage"></span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Display:</span>
+                                <span id="productDisplay"></span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Camera:</span>
+                                <span id="productCamera"></span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Battery:</span>
+                                <span id="productBattery"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-plans">
+                        <h2>Payment Plans</h2>
+                        <div id="plans"></div>
+                    </div>
+                    <div class="social-share">
+                        <h3>Share this product:</h3>
+                        <div class="share-buttons">
+                            <a href="#" class="share-button facebook" data-share-platform="facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-button twitter" data-share-platform="twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-button whatsapp" data-share-platform="whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="share-button linkedin" data-share-platform="linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="related-products" aria-labelledby="related-products-title">
+        <div class="container">
+            <h2 id="related-products-title" class="section-title">Related Products</h2>
+            <div class="product-grid" id="relatedProductsGrid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Djellal Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { productData } from './assets/js/products.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = parseInt(params.get('id'));
+
+            const product = productData.find(p => p.id === productId);
+
+            if (!product) {
+                document.querySelector('main .container').innerHTML = '<p>Product not found.</p>';
+                return;
+            }
+
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productPrice').textContent = product.formattedPrice;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productRam').textContent = product.specs.ram;
+            document.getElementById('productProcessor').textContent = product.specs.processor;
+            document.getElementById('productStorage').textContent = product.specs.storage;
+            document.getElementById('productDisplay').textContent = product.specs.display;
+            document.getElementById('productCamera').textContent = product.specs.camera;
+            document.getElementById('productBattery').textContent = product.specs.battery;
+
+            const mainProductImage = document.getElementById('mainProductImage');
+            const thumbnailGallery = document.getElementById('thumbnailGallery');
+
+            mainProductImage.src = product.image;
+            mainProductImage.alt = product.name;
+
+            if (product.images && product.images.length > 0) {
+                product.images.forEach(imgUrl => {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = imgUrl;
+                    thumbnail.alt = product.name + ' thumbnail';
+                    thumbnail.classList.add('thumbnail');
+                    thumbnail.addEventListener('click', () => {
+                        mainProductImage.src = imgUrl;
+                    });
+                    thumbnailGallery.appendChild(thumbnail);
+                });
+            } else {
+                thumbnailGallery.style.display = 'none';
+            }
+
+            const categoryCrumb = document.getElementById('category-crumb');
+            if (categoryCrumb) {
+                categoryCrumb.textContent = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+            }
+
+            const specsToggle = document.querySelector('.specs-toggle');
+            const specsContent = document.getElementById('specs-content');
+
+            if (specsToggle && specsContent) {
+                specsToggle.addEventListener('click', () => {
+                    const isExpanded = specsToggle.getAttribute('aria-expanded') === 'true';
+                    specsToggle.setAttribute('aria-expanded', !isExpanded);
+                    specsContent.classList.toggle('collapsed', isExpanded);
+
+                    const icon = specsToggle.querySelector('i');
+                    if (icon) {
+                        icon.className = isExpanded ? 'fas fa-chevron-right' : 'fas fa-chevron-down';
+                    }
+                });
+            }
+
+            const plansContainer = document.getElementById('plans');
+
+            const plans = [
+                { months: 12, percentage: 0.45 },
+                { months: 8, percentage: 0.35 },
+                { months: 6, percentage: 0.25 }
+            ];
+
+            plans.forEach(plan => {
+                const planElement = document.createElement('div');
+                planElement.classList.add('plan');
+
+                const totalAmount = product.price * (1 + plan.percentage);
+                const monthlyPayment = totalAmount / plan.months;
+
+                planElement.innerHTML = `
+                    <h3>${plan.months}-Month Plan</h3>
+                    <p>Total: ${totalAmount.toLocaleString('fr-FR')} DZD</p>
+                    <p>Monthly: ${monthlyPayment.toLocaleString('fr-FR')} DZD</p>
+                `;
+
+                plansContainer.appendChild(planElement);
+            });
+
+            // Related Products
+            const relatedProductsGrid = document.getElementById('relatedProductsGrid');
+            const relatedProducts = productData.filter(p => 
+                (p.brand === product.brand || p.category === product.category) && p.id !== product.id
+            ).slice(0, 4); // Get up to 4 related products
+
+            if (relatedProducts.length > 0) {
+                relatedProducts.forEach(relatedProduct => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <div class="product-image">
+                            <img src="${relatedProduct.image}" alt="${relatedProduct.name}" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>${relatedProduct.name}</h3>
+                            <p class="price">${relatedProduct.formattedPrice}</p>
+                            <a href="details.html?id=${relatedProduct.id}" class="btn btn-secondary">View Details</a>
+                        </div>
+                    `;
+                    relatedProductsGrid.appendChild(productCard);
+                });
+            } else {
+                relatedProductsGrid.innerHTML = '<p>No related products found.</p>';
+            }
+
+            // Social Share Buttons
+            const shareButtons = document.querySelectorAll('.share-button');
+            shareButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const platform = button.dataset.sharePlatform;
+                    const productUrl = window.location.href;
+                    const productTitle = document.getElementById('productName').textContent;
+
+                    let shareUrl = '';
+
+                    switch (platform) {
+                        case 'facebook':
+                            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(productUrl)}`;
+                            break;
+                        case 'twitter':
+                            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(productUrl)}&text=${encodeURIComponent(productTitle)}`;
+                            break;
+                        case 'whatsapp':
+                            shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(productTitle + ' ' + productUrl)}`;
+                            break;
+                        case 'linkedin':
+                            shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(productUrl)}&title=${encodeURIComponent(productTitle)}`;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    if (shareUrl) {
+                        window.open(shareUrl, '_blank', 'width=600,height=400');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

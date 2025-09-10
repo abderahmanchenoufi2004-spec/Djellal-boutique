@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Djellal Boutique</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div id="loading-screen" class="loading-screen" role="status" aria-label="Loading">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+        <p class="loading-text">Loading Djellal Boutique...</p>
+    </div>
+    
+    <section class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+213561338702" aria-label="Call our store at 0561338702">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> 
+                    <span>0561338702</span>
+                </a>
+                <a href="mailto:info@djellalboutique.com" aria-label="Email us at info@djellalboutique.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> 
+                    <span>info@djellalboutique.com</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#store-location" aria-label="Find our store location">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+                    <span>Store Locator</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <header role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Djellal Boutique Home">
+                    <h1>Djellal<span>Boutique</span></h1>
+                </a>
+            </div>
+            
+            <div class="search-container" role="search">
+                <input
+                    type="search"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search for products, brands, or models..."
+                    aria-label="Search products"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button class="search-button" aria-label="Search products" type="button">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="searchAutocomplete" class="search-autocomplete" role="listbox" aria-label="Search suggestions"></div>
+            </div>
+            
+            <div class="header-actions">
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="new-arrivals.html" role="menuitem">New Arrivals</a></li>
+                <li role="none"><a href="brands.html" role="menuitem" class="active">Brands</a></li>
+                <li role="none"><a href="#best-sellers" role="menuitem">Best Sellers</a></li>
+                <li role="none"><a href="#deals" role="menuitem">Deals</a></li>
+                <li role="none"><a href="#support" role="menuitem">Support</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="brands-list" aria-labelledby="brands-title">
+            <div class="container">
+                <h2 id="brands-title" class="section-title">Our Brands</h2>
+                <div id="brandsContainer" class="brands-container"></div>
+            </div>
+        </section>
+
+        <section class="products" id="brand-products" aria-labelledby="brand-products-title" style="display: none;">
+            <div class="container">
+                <h2 id="brand-products-title" class="section-title">Products by <span id="selectedBrandName"></span></h2>
+                <div class="product-grid" role="grid" aria-label="Product listings"></div>
+                <div class="load-more-container text-center">
+                    <button id="loadMoreBrandProducts" class="btn btn-secondary btn-lg">
+                        <span class="load-more-text">Load More Products</span>
+                        <span class="load-more-spinner hidden" aria-hidden="true">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section footer-company">
+                        <div class="logo">
+                            <a href="#" aria-label="Djellal Boutique Home">
+                                Djellal<span>Boutique</span>
+                            </a>
+                        </div>
+                        <p>Your trusted partner for premium electronics and technology. Discover the latest smartphones, appliances, and tech accessories with flexible payment options.</p>
+                        
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+213561338702">+213 561 338 702</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:info@djellalboutique.com">info@djellalboutique.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Algeria, Multiple Locations</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        &copy; 2025 Djellal Boutique. All rights reserved.
+                    </p>
+                    <ul class="footer-legal">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div id="quickViewModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-button" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="" loading="lazy">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-price" id="modalProductPrice"></p>
+                    <div class="modal-specs">
+                        <div class="spec">
+                            <span class="spec-label">RAM:</span>
+                            <span class="spec-value" id="modalProductRam"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Processor:</span>
+                            <span class="spec-value" id="modalProductProcessor"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Storage:</span>
+                            <span class="spec-value" id="modalProductStorage">256GB</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Display:</span>
+                            <span class="spec-value" id="modalProductDisplay">6.1" OLED</span>
+                        </div>
+                    </div>
+                    <div class="modal-payment-plans">
+                        <h3>Payment Plans</h3>
+                        <div id="modalPlans"></div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary add-to-cart-modal">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            Add to Cart
+                        </button>
+                        <a href="#" id="modalDetailsButton" class="btn btn-secondary">
+                            View Full Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true">
+    </div>
+
+    <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+    <script src="assets/js/app.js" type="module"></script>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => loadingScreen.style.display = 'none', 500);
+            }
+            
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('Page load time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+        });
+        
+        if (!window.CSS || !CSS.supports('display', 'grid')) {
+            document.body.className += ' no-grid';
+        }
+    </script>
+</body>
+</html>
