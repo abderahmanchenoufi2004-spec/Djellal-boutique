@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Djellal Boutique</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <style>
+        .details-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .product-image-details img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .product-info-details h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .price-details {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        .payment-plans h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .plan {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .plan h3 {
+            margin-bottom: 10px;
+        }
+    .specs {
+            margin-bottom: 30px;
+        }
+        .spec {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .spec-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>Djellal<span>Boutique</span></h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="details-container">
+                <div class="product-image-details">
+                    <img id="productImage" src="" alt="Product Image">
+                </div>
+                <div class="product-info-details">
+                    <h1 id="productName"></h1>
+                    <p class="price-details" id="productPrice"></p>
+                    <div class="specs">
+                        <div class="spec">
+                            <span class="spec-label">RAM:</span>
+                            <span id="productRam"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Processor:</span>
+                            <span id="productProcessor"></span>
+                        </div>
+                    </div>
+                    <div class="payment-plans">
+                        <h2>Payment Plans</h2>
+                        <div id="plans"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Djellal Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const priceString = params.get('price');
+            const image = params.get('image');
+            const ram = params.get('ram');
+            const processor = params.get('processor');
+
+            const price = parseFloat(priceString.replace(/[^0-9.-]+/g,""));
+
+            document.getElementById('productName').textContent = name;
+            document.getElementById('productPrice').textContent = priceString;
+            document.getElementById('productImage').src = image;
+            document.getElementById('productRam').textContent = ram;
+            document.getElementById('productProcessor').textContent = processor;
+
+            const plansContainer = document.getElementById('plans');
+
+            const plans = [
+                { months: 12, percentage: 0.45 },
+                { months: 8, percentage: 0.35 },
+                { months: 6, percentage: 0.25 }
+            ];
+
+            plans.forEach(plan => {
+                const planElement = document.createElement('div');
+                planElement.classList.add('plan');
+
+                const totalAmount = price * (1 + plan.percentage);
+                const monthlyPayment = totalAmount / plan.months;
+
+                planElement.innerHTML = `
+                    <h3>${plan.months}-Month Plan</h3>
+                    <p>Total: ${totalAmount.toLocaleString('fr-FR')} DZD</p>
+                    <p>Monthly: ${monthlyPayment.toLocaleString('fr-FR')} DZD</p>
+                `;
+
+                plansContainer.appendChild(planElement);
+            });
+        });
+    </script>
+</body>
+</html>

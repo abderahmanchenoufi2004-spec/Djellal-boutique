@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Djellal Boutique - Your premier destination for the latest smartphones, electronics, and tech accessories with flexible payment plans.">
+    <meta name="keywords" content="smartphones, electronics, tech, boutique, payment plans, Algeria">
+    <meta name="author" content="Djellal Boutique">
+    
+    <title>Djellal Boutique - Latest Tech Collection | Premium Electronics Store</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Progressive font loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap">
+    </noscript>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Djellal Boutique - Latest Tech Collection">
+    <meta property="og:description" content="Discover the latest smartphones and electronics with flexible payment plans at Djellal Boutique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://djellalboutique.com">
+    
+    <!-- Performance and loading optimizations -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#3a7bd5">
+</head>
+<body>
+    <!-- Skip navigation for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" role="status" aria-label="Loading">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+        <p class="loading-text">Loading Djellal Boutique...</p>
+    </div>
+    
+    <!-- Top Bar -->
+    <section class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+213561338702" aria-label="Call our store at 0561338702">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> 
+                    <span>0561338702</span>
+                </a>
+                <a href="mailto:info@djellalboutique.com" aria-label="Email us at info@djellalboutique.com">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> 
+                    <span>info@djellalboutique.com</span>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#store-location" aria-label="Find our store location">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+                    <span>Store Locator</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#" aria-label="Djellal Boutique Home">
+                    <h1>Djellal<span>Boutique</span></h1>
+                </a>
+            </div>
+            
+            <div class="search-container" role="search">
+                <input 
+                    type="search" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search for products, brands, or models..."
+                    aria-label="Search products"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button class="search-button" aria-label="Search products" type="button">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="searchAutocomplete" class="search-autocomplete" role="listbox" aria-label="Search suggestions"></div>
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-action wishlist-toggle" aria-label="View wishlist" title="Wishlist">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <span class="wishlist-count">0</span>
+                </button>
+                <button class="header-action cart-toggle" aria-label="View shopping cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="categories-dropdown">
+                <button class="categories-btn" 
+                        aria-expanded="false" 
+                        aria-controls="categories-menu"
+                        aria-haspopup="true">
+                    <i class="fas fa-bars" aria-hidden="true"></i> 
+                    All Categories
+                </button>
+                <div class="dropdown-content" id="categories-menu" role="menu">
+                    <a href="#smartphones" role="menuitem">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i> Smartphones
+                    </a>
+                    <a href="#laptops" role="menuitem">
+                        <i class="fas fa-laptop" aria-hidden="true"></i> Laptops & Computers
+                    </a>
+                    <a href="#tvs" role="menuitem">
+                        <i class="fas fa-tv" aria-hidden="true"></i> TVs & Home Theater
+                    </a>
+                    <a href="#appliances" role="menuitem">
+                        <i class="fas fa-home" aria-hidden="true"></i> Home Appliances
+                    </a>
+                    <a href="#ac" role="menuitem">
+                        <i class="fas fa-snowflake" aria-hidden="true"></i> Air Conditioners
+                    </a>
+                    <a href="#ovens" role="menuitem">
+                        <i class="fas fa-fire" aria-hidden="true"></i> Ovens
+                    </a>
+                    <a href="#microwaves" role="menuitem">
+                        <i class="fas fa-microwave" aria-hidden="true"></i> Microwaves
+                    </a>
+                    <a href="#washing" role="menuitem">
+                        <i class="fas fa-tshirt" aria-hidden="true"></i> Washing Machines
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#" role="menuitem" class="active">Home</a></li>
+                <li role="none"><a href="#new-arrivals" role="menuitem">New Arrivals</a></li>
+                <li role="none"><a href="#best-sellers" role="menuitem">Best Sellers</a></li>
+                <li role="none"><a href="#deals" role="menuitem">Deals</a></li>
+                <li role="none"><a href="#brands" role="menuitem">Brands</a></li>
+                <li role="none"><a href="#support" role="menuitem">Support</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h2 id="hero-title">Latest Smartphone Collection</h2>
+                <p>Discover the future of mobile technology with our premium selection.</p>
+                <a href="#featured-products" class="btn btn-primary">
+                    Shop Now <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="#" aria-label="Home">Home</a></li>
+                    <li aria-current="page">Products</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Products Section -->
+        <section class="products" id="featured-products" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="section-title">Featured Products</h2>
+                
+                <!-- Product Controls -->
+                <div class="product-controls">
+                    <div class="product-filters">
+                        <button class="filter-toggle btn btn-secondary" 
+                                aria-expanded="false" 
+                                aria-controls="filter-panel">
+                            <i class="fas fa-filter" aria-hidden="true"></i> 
+                            Filters
+                        </button>
+                        <div id="filter-panel" class="filter-panel hidden">
+                            <div class="filter-group">
+                                <h3>Price Range</h3>
+                                <div class="price-range">
+                                    <input type="range" id="minPrice" min="0" max="1000000" value="0" aria-label="Minimum price">
+                                    <input type="range" id="maxPrice" min="0" max="1000000" value="1000000" aria-label="Maximum price">
+                                    <div class="price-display">
+                                        <span id="minPriceDisplay">0 DZD</span> - <span id="maxPriceDisplay">1,000,000 DZD</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <h3>Brand</h3>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" value="apple"> Apple</label>
+                                    <label><input type="checkbox" value="samsung"> Samsung</label>
+                                    <label><input type="checkbox" value="google"> Google</label>
+                                    <label><input type="checkbox" value="xiaomi"> Xiaomi</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sort-by">
+                        <label for="sortOptions">Sort by:</label>
+                        <select id="sortOptions" aria-label="Sort products">
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="price-asc">Price (Low to High)</option>
+                            <option value="price-desc">Price (High to Low)</option>
+                            <option value="rating-desc">Highest Rated</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="product-grid" role="grid" aria-label="Product listings">
+                    <!-- Products will be loaded here by JavaScript -->
+                    <div class="loading-products" role="status" aria-label="Loading products">
+                        <div class="product-card-skeleton" aria-hidden="true">
+                            <div class="skeleton-image"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-title"></div>
+                                <div class="skeleton-price"></div>
+                                <div class="skeleton-button"></div>
+                            </div>
+                        </div>
+                        <div class="product-card-skeleton" aria-hidden="true">
+                            <div class="skeleton-image"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-title"></div>
+                                <div class="skeleton-price"></div>
+                                <div class="skeleton-button"></div>
+                            </div>
+                        </div>
+                        <div class="product-card-skeleton" aria-hidden="true">
+                            <div class="skeleton-image"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-title"></div>
+                                <div class="skeleton-price"></div>
+                                <div class="skeleton-button"></div>
+                            </div>
+                        </div>
+                        <div class="product-card-skeleton" aria-hidden="true">
+                            <div class="skeleton-image"></div>
+                            <div class="skeleton-content">
+                                <div class="skeleton-title"></div>
+                                <div class="skeleton-price"></div>
+                                <div class="skeleton-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More Products -->
+                <div class="load-more-container text-center">
+                    <button id="loadMore" class="btn btn-secondary btn-lg">
+                        <span class="load-more-text">Load More Products</span>
+                        <span class="load-more-spinner hidden" aria-hidden="true">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Company Information -->
+                    <div class="footer-section footer-company">
+                        <div class="logo">
+                            <a href="#" aria-label="Djellal Boutique Home">
+                                Djellal<span>Boutique</span>
+                            </a>
+                        </div>
+                        <p>Your trusted partner for premium electronics and technology. Discover the latest smartphones, appliances, and tech accessories with flexible payment options.</p>
+                        
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+213561338702">+213 561 338 702</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:info@djellalboutique.com">info@djellalboutique.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Algeria, Multiple Locations</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#products">Our Products</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#warranty">Warranty</a></li>
+                            <li><a href="#support">Customer Support</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="footer-section">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="#smartphones">Smartphones</a></li>
+                            <li><a href="#laptops">Laptops</a></li>
+                            <li><a href="#appliances">Home Appliances</a></li>
+                            <li><a href="#accessories">Accessories</a></li>
+                            <li><a href="#deals">Special Deals</a></li>
+                            <li><a href="#new-arrivals">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="footer-section">
+                        <h3>Stay Updated</h3>
+                        <p>Subscribe to our newsletter for the latest products and exclusive offers.</p>
+                        <form class="newsletter-form" aria-label="Newsletter subscription">
+                            <input 
+                                type="email" 
+                                class="newsletter-input" 
+                                placeholder="Your email address"
+                                aria-label="Email address"
+                                required
+                            >
+                            <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        &copy; 2025 Djellal Boutique. All rights reserved.
+                    </p>
+                    <ul class="footer-legal">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                    </ul>
+                    <div class="payment-methods" aria-label="Accepted payment methods">
+                        <span>We accept:</span>
+                        <div class="payment-icon" title="Visa">
+                            <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                        </div>
+                        <div class="payment-icon" title="Mastercard">
+                            <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                        </div>
+                        <div class="payment-icon" title="PayPal">
+                            <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                        </div>
+                        <div class="payment-icon" title="Cash on Delivery">
+                            <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-button" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="" loading="lazy">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-price" id="modalProductPrice"></p>
+                    <div class="modal-specs">
+                        <div class="spec">
+                            <span class="spec-label">RAM:</span>
+                            <span class="spec-value" id="modalProductRam"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Processor:</span>
+                            <span class="spec-value" id="modalProductProcessor"></span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Storage:</span>
+                            <span class="spec-value" id="modalProductStorage">256GB</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Display:</span>
+                            <span class="spec-value" id="modalProductDisplay">6.1" OLED</span>
+                        </div>
+                    </div>
+                    <div class="modal-payment-plans">
+                        <h3>Payment Plans</h3>
+                        <div id="modalPlans"></div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary add-to-cart-modal">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            Add to Cart
+                        </button>
+                        <a href="#" id="modalDetailsButton" class="btn btn-secondary">
+                            View Full Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar" role="complementary" aria-labelledby="cart-title">
+        <div class="cart-header">
+            <h2 id="cart-title">Shopping Cart</h2>
+            <button class="cart-close" aria-label="Close cart">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be populated here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    <p>Your cart is empty</p>
+                    <a href="#products" class="btn btn-primary">Start Shopping</a>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: <strong id="cartTotal">0 DZD</strong></span>
+            </div>
+            <button class="btn btn-primary btn-lg checkout-btn">
+                <i class="fas fa-credit-card" aria-hidden="true"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div id="wishlistSidebar" class="wishlist-sidebar" role="complementary" aria-labelledby="wishlist-title">
+        <div class="wishlist-header">
+            <h2 id="wishlist-title">Your Wishlist</h2>
+            <button class="wishlist-close" aria-label="Close wishlist">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="wishlist-content">
+            <div id="wishlistItems" class="wishlist-items">
+                <!-- Wishlist items will be populated here -->
+                <div class="empty-wishlist">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <p>Your wishlist is empty</p>
+                    <a href="#products" class="btn btn-primary">Browse Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true">
+        <!-- Toast notifications will be added here dynamically -->
+    </div>
+
+    <!-- Overlay for modals and sidebars -->
+    <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+    
+    <!-- Performance monitoring (example) -->
+    <script>
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // Hide loading screen
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => loadingScreen.style.display = 'none', 500);
+            }
+            
+            // Log performance metrics
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('Page load time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+        });
+        
+        // Critical CSS loading fallback
+        if (!window.CSS || !CSS.supports('display', 'grid')) {
+            document.body.className += ' no-grid';
+        }
+    </script>
+</body>
+</html>
