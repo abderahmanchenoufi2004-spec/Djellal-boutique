@@ -1,0 +1,191 @@
+/* 
+ * Footer Styles for Djellal Boutique
+ * Footer layout and components
+ */
+
+/* Main Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  padding: var(--spacing-2xl) 0 var(--spacing-md);
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Footer Column Headings */
+.footer-column h3 {
+  color: white;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.footer-column h3 span {
+  color: var(--primary-light);
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+/* Footer Text */
+.footer-column p {
+  color: var(--gray-light);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+/* Footer Links */
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-column ul a {
+  color: var(--gray-light);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-column ul a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Contact Info */
+address {
+  font-style: normal;
+}
+
+address p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+address p i {
+  color: var(--primary-light);
+  width: 16px;
+  text-align: center;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  color: var(--gray);
+  font-size: var(--font-size-sm);
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-xl);
+  color: var(--gray-light);
+}
+
+.payment-methods i {
+  transition: color var(--transition-fast);
+}
+
+.payment-methods i:hover {
+  color: white;
+}
+
+
+
+/* App Download Links */
+.app-download {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.app-download a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  color: white;
+  transition: background-color var(--transition-fast);
+}
+
+.app-download a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app-download i {
+  font-size: var(--font-size-xl);
+}
+
+.app-download .app-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-download .app-store {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.app-download .app-name {
+  font-weight: 500;
+}

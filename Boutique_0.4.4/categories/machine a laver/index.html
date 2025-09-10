@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the latest washing machines at Djellal Boutique">
+    <title>Washing Machines - Djellal Boutique</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    
+    <script defer src="../../assets/js/machine-a-laver.js"></script>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <section class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+213561338702" aria-label="Call our store"><i class="fas fa-phone-alt"></i> <span>0561338702</span></a>
+                <a href="mailto:info@djellalboutique.com" aria-label="Email us"><i class="fas fa-envelope"></i> <span>info@djellalboutique.com</span></a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://maps.app.goo.gl/mtfAz5NegEL2PFY49" aria-label="Find our store location" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> <span>Store Locator</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../../index.html" aria-label="Djellal Boutique Home">
+                    <h1>Djellal<span>Boutique</span></h1>
+                </a>
+            </div>
+            <div class="search-container">
+                <input 
+                    type="search" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+                <button class="search-button" aria-label="Search" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="header-actions">
+                <a href="../../index.html" class="header-action" aria-label="Your account">
+                    <i class="fas fa-user"></i>
+                    <span>Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="categories-dropdown">
+                <button class="categories-btn" aria-expanded="false" aria-controls="categories-menu">
+                    <i class="fas fa-bars"></i> All Categories
+                </button>
+                <div class="dropdown-content" id="categories-menu">
+                    <a href="../smartphones/index.html">Smartphones</a>
+                    <a href="../laptops/index.html">Laptops & Computers</a>
+                    <a href="../tvs/index.html">TVs & Home Theater</a>
+                    <a href="../appliances/index.html">Home Appliances</a>
+                    <a href="../air conditioners/index.html">Air conditioners</a>
+                    <a href="../ovens/index.html">Ovens</a>
+                    <a href="../Microwaves/index.html">Microwaves</a>
+                    <a href="./index.html">Washing Machines</a>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/new-arrivals.html">New Arrivals</a></li>
+                <li><a href="../../pages/best-sellers.html">Best Sellers</a></li>
+                <li><a href="../../pages/deals.html">Deals</a></li>
+                <li><a href="../../pages/brands.html">Brands</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="product-page">
+        <div class="container">
+            <h2 class="section-title">Washing Machines</h2>
+            
+            <div class="product-layout">
+                <aside class="sidebar">
+                    <div class="filter-box">
+                        <h3>Filter Options</h3>
+                        
+                        <div class="filter-group">
+                            <label for="brandFilter">Brand:</label>
+                            <select id="brandFilter">
+                                <option value="">All Brands</option>
+                                <option value="lg">LG</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="beko">Beko</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="capacityFilter">Capacity:</label>
+                            <select id="capacityFilter">
+                                <option value="">All Capacities</option>
+                                <option value="7kg">7kg</option>
+                                <option value="8kg">8kg</option>
+                                <option value="9kg">9kg</option>
+                                <option value="10kg">10kg</option>
+                            </select>
+                        </div>
+                        
+                        <button id="clearFilters" class="btn btn-secondary">Clear Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Product Grid - Placeholder for now -->
+                <section id="washingMachineGrid" class="product-grid">
+                    <p>Product listings for washing machines will be dynamically loaded here.</p>
+                </section>
+            </div>
+            
+            <div class="pagination-container">
+                <div id="pagination" class="pagination"></div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Payment Info Section -->
+    <section class="payment-info">
+        <div class="container">
+            <h3>Payment Options</h3>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <h4>Cash Payment</h4>
+                    <p>Pay the full amount upfront</p>
+                </div>
+                <div class="payment-option">
+                    <h4>Installment Plan</h4>
+                    <p>Pay over 12 months with 30% added to the original price</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Djellal Boutique</h3>
+                    <p>Your trusted electronics store since 2020</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@djellalboutique.com</p>
+                    <p>Phone: +213 555 123 456</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Djellal Boutique. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </body>
+</html>

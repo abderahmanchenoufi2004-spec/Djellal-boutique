@@ -1,0 +1,225 @@
+/* 
+ * Responsive Styles for Djellal Boutique
+ * Mobile-first responsive design for optimal viewing across devices
+ */
+
+/* Base responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-slider {
+        height: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header adjustments */
+    .header-container {
+        grid-template-columns: auto 1fr;
+    }
+    
+    .search-container {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: var(--spacing-md);
+    }
+    
+    .header-actions {
+        justify-self: end;
+    }
+    
+    /* Product grid adjustments */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Top bar adjustments */
+    .top-bar .container {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    /* Navigation adjustments */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
+        z-index: var(--z-dropdown);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+    
+    /* Hero slider adjustments */
+    .hero-slider {
+        height: 400px;
+    }
+    
+    .slide-content h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    /* Categories grid adjustments */
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Filter adjustments */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .section-controls {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+    
+    .filter-container {
+        flex-grow: 1;
+    }
+    
+    .filter-container select {
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+    
+    
+    
+    /* Footer adjustments */
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Header actions adjustments */
+    .header-action span {
+        display: none;
+    }
+    
+    .header-actions {
+        gap: var(--spacing-md);
+    }
+    
+    /* Product grid adjustments */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Hero slider adjustments */
+    .hero-slider {
+        height: 350px;
+    }
+    
+    .slide-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .slide-content h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .slide-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Categories grid adjustments */
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Specific component responsive styles */
+
+/* Product list view (alternative to grid) */
+@media (min-width: 768px) {
+    .product-list .product {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        height: auto;
+    }
+    
+    .product-list .product-image {
+        height: 100%;
+        padding-bottom: 0;
+    }
+    
+    .product-list .product-info {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+    }
+    
+    .product-list .product-description {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+}
+
+/* Print styles */
+@media print {
+    .top-bar,
+    .main-nav,
+    .hero-slider,
+    .newsletter,
+    .footer,
+    .back-to-top,
+    .product-actions,
+    .add-to-cart,
+    .notification-container {
+        display: none !important;
+    }
+    
+    .product {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-style: italic;
+    }
+}

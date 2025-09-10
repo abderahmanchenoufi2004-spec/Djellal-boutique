@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the best-selling products at Djellal Boutique">
+    <title>Best Sellers - Djellal Boutique</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/ui/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Top Bar -->
+    <section class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+213561338702" aria-label="Call our store"><i class="fas fa-phone-alt"></i> <span>0561338702</span></a>
+                <a href="mailto:info@djellalboutique.com" aria-label="Email us"><i class="fas fa-envelope"></i> <span>info@djellalboutique.com</span></a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://maps.app.goo.gl/mtfAz5NegEL2PFY49" aria-label="Find our store location" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> <span>Store Locator</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="Djellal Boutique Home">
+                    <h1>Djellal<span>Boutique</span></h1>
+                </a>
+            </div>
+            <div class="search-container">
+                <input 
+                    type="search" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+                <button class="search-button" aria-label="Search" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="header-actions">
+                <a href="../index.html" class="header-action" aria-label="Your account">
+                    <i class="fas fa-user"></i>
+                    <span>Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="categories-dropdown">
+                <button class="categories-btn" aria-expanded="false" aria-controls="categories-menu">
+                    <i class="fas fa-bars"></i> All Categories
+                </button>
+                <div class="dropdown-content" id="categories-menu">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="best-sellers.html" aria-current="page">Best Sellers</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="brands.html">Brands</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="container" style="padding: 2rem 0;">
+        <h2 class="section-title">Best Sellers</h2>
+        <div id="productGrid" class="product-grid">
+            <!-- Best-selling products will be populated here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Djellal<span>Boutique</span></h3>
+                    <p>Your premier destination for quality electronics and cutting-edge technology products.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/djellalboutique" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/djellalboutique" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/djellalboutique" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/djellalboutique" aria-label="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Sour_El_Ghozalne, Bouira, Algeria</p>
+                        <p><i class="fas fa-phone"></i> +213 561338702</p>
+                        <p><i class="fas fa-envelope"></i> info@djellalboutique.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Djellal Boutique. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+{
+  "products": [
+    {
+      "id": "laptop1",
+      "name": "Dell XPS 15",
+      "category": "laptops",
+      "brand": "dell",
+      "price": 150000,
+      "image": "assets/images/products/laptops/dell xps15_.jpg",
+      "description": "Powerful laptop for creative professionals.",
+      "featured": true
+    },
+    {
+      "id": "laptop2",
+      "name": "HP Spectre x360",
+      "category": "laptops",
+      "brand": "hp",
+      "price": 130000,
+      "image": "assets/images/products/laptops/laptop-murjp1nk4lp1idlt.jpg",
+      "description": "Versatile 2-in-1 laptop with premium design.",
+      "featured": true
+    },
+    {
+      "id": "microwave1",
+      "name": "Samsung Microwave Oven",
+      "category": "microwaves",
+      "brand": "samsung",
+      "price": 25000,
+      "image": "assets/images/products/Microwaves/samsung-microwave.jpg",
+      "description": "Efficient and stylish microwave oven."
+    },
+    {
+      "id": "microwave2",
+      "name": "LG NeoChef Microwave",
+      "category": "microwaves",
+      "brand": "lg",
+      "price": 30000,
+      "image": "assets/images/products/Microwaves/lg-microwave.jpg",
+      "description": "Smart inverter technology for even cooking."
+    },
+    {
+      "id": "airconditioner1",
+      "name": "LG Dual Inverter AC",
+      "category": "air conditioners",
+      "brand": "lg",
+      "price": 70000,
+      "image": "assets/images/products/Air_Conditioners/lg-ac.jpg",
+      "description": "Energy-efficient cooling with dual inverter compressor.",
+      "featured": true
+    },
+    {
+      "id": "airconditioner2",
+      "name": "Samsung WindFree AC",
+      "category": "air conditioners",
+      "brand": "samsung",
+      "price": 75000,
+      "image": "assets/images/products/Air_Conditioners/samsung-ac.jpg",
+      "description": "Cools without direct wind for ultimate comfort."
+    },
+    {
+      "id": "oven1",
+      "name": "Bosch Built-in Oven",
+      "category": "ovens",
+      "brand": "bosch",
+      "price": 60000,
+      "image": "assets/images/products/ovens/bosch-oven.jpg",
+      "description": "Multi-function oven for perfect baking and roasting."
+    },
+    {
+      "id": "oven2",
+      "name": "Siemens iQ500 Oven",
+      "category": "ovens",
+      "brand": "siemens",
+      "price": 65000,
+      "image": "assets/images/products/ovens/siemens-oven.jpg",
+      "description": "Advanced features for modern kitchens."
+    },
+    {
+      "id": "smartphone1",
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "smartphones",
+      "brand": "samsung",
+      "price": 180000,
+      "image": "assets/images/products/smartphones/Samsung-Galaxy-S24-Ultra-One-UI-7-Android-15-fonctionnalites-date-de-sortie-nouveautes.jpg",
+      "description": "Flagship smartphone with cutting-edge camera.",
+      "featured": true
+    },
+    {
+      "id": "smartphone2",
+      "name": "iPhone 15 Pro Max",
+      "category": "smartphones",
+      "brand": "apple",
+      "price": 200000,
+      "image": "assets/images/products/smartphones/iphone-15.jpg",
+      "description": "Ultimate iPhone experience with A17 Bionic chip.",
+      "featured": true
+    },
+    {
+      "id": "tv1",
+      "name": "Samsung QLED 4K TV",
+      "category": "tvs",
+      "brand": "samsung",
+      "price": 90000,
+      "image": "assets/images/products/tvs/samrt-tv.jpg",
+      "description": "Vibrant QLED display with stunning 4K resolution.",
+      "featured": true
+    },
+    {
+      "id": "tv2",
+      "name": "LG OLED evo TV",
+      "category": "tvs",
+      "brand": "lg",
+      "price": 120000,
+      "image": "assets/images/products/tvs/lg-oled.jpg",
+      "description": "Self-lit pixels for infinite contrast and perfect black."
+    }
+  ]
+}
